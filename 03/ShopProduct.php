@@ -3,17 +3,13 @@
 // Listing 3.1, 3.4
 class ShopProduct
 {
-    public $title;
-    public $producerMainName;
-    public $producerFirstName;
-    public $price = 0;
-
-    public function __construct($title, $firstName, $mainName, $price)
+    public function __construct(
+        public $title,
+        public $producerFirstName,
+        public $producerMainName,
+        public $price)
     {
-        $this->title = $title;
-        $this->producerFirstName = $firstName;
-        $this->producerMainName = $mainName;
-        $this->price = $price;
+
     }
 
     public function getProducer()
